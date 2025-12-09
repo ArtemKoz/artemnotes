@@ -1,42 +1,14 @@
-# Site settings
 title: Artem Notes
-description: My personal notes and blog
-baseurl: ""                 # leave empty because using a custom domain
-url: "https://www.artemnotes.com"
+description: Personal blog
 theme: minima
 
-# Navigation (top menu)
-# Minima automatically shows all pages in the top menu except index.md
-# Home is linked via the site logo, About will appear in the menu
-# If you have more pages later, you can control menu visibility with nav_exclude
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      nav_exclude: false   # keep About visible
-      layout: page
+# Pages in top navigation, in order
+header_pages:
+  - about.md
 
-# Plugins supported by GitHub Pages
-plugins:
-  - jekyll-feed          # RSS feed for posts
-  - jekyll-seo-tag       # SEO metadata
+# Disable RSS
+plugins: []
 
-# Markdown settings
+# Optional: keeps URLs clean
 markdown: kramdown
-kramdown:
-  input: GFM              # GitHub Flavored Markdown
 
-# Optional: blog post settings
-paginate: 10              # number of posts per page (if pagination is used)
-
-# Exclude files/folders from build
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle
-  - README.md
-
-# Custom domain (GitHub Pages)
-# Make sure a file CNAME exists at the root with your domain
