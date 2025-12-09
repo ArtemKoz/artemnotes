@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about/
 ---
 
 # About Me
 
-This is a small personal website built with Jekyll and hosted on GitHub Pages.
+This is my About page. You can write anything here about yourself or your site.
