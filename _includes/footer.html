@@ -1,3 +1,14 @@
-<footer class="site-footer" style="text-align:center; padding: 20px 0;">
-  <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — All rights reserved.</p>
-</footer>
+<header class="site-header">
+  <div class="wrapper">
+
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      {{ site.title }}
+    </a>
+
+    <nav class="site-nav">
+      <a class="page-link" href="/posts/">All Posts</a>
+      <a class="page-link" href="/about/">About</a>
+    </nav>
+
+  </div>
+</header>
