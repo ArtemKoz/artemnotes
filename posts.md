@@ -6,7 +6,7 @@ permalink: /posts/
 
 <div style="max-width: 700px; margin: 0 auto;">
 
-# All Posts
+All Posts
 
 <ul>
 {% for post in site.posts %}
