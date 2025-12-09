@@ -1,0 +1,6 @@
+title: Artem Notes
+description: My personal notes
+baseurl: ""           # leave empty for custom domain
+url: "https://www.artemnotes.com"
+theme: minima          # built-in theme
+plugins: ["jekyll-feed"]  # optional, GitHub Pages supports it
