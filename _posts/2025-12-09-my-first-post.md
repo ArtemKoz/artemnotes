@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My First Post"
-date: 2025-12-10
+date: 2025-12-09
 ---
 
 Hey, that's my first post here while everthing is still in testing.
