@@ -4,6 +4,7 @@ theme: minima
 
 # Only About appears in the top navigation
 header_pages:
+  - posts.md
   - about.md
 
 # Disable RSS generation
