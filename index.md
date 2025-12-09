@@ -5,7 +5,7 @@ title: Home
 
 <div style="max-width: 700px; margin: 0 auto;">
 
-# Latest Posts
+Latest Posts
 
 <ul>
 {% for post in site.posts %}
@@ -17,3 +17,4 @@ title: Home
 </ul>
 
 </div>
+
