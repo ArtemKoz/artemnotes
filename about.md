@@ -1,9 +1,14 @@
 ---
-layout: page
-title: About
+layout: default
 permalink: /about/
 ---
 
-# About Me
+<div style="display: flex; justify-content: center; text-align: center; margin-top: 40px;">
+  <div style="max-width: 600px;">
 
-This is my About page. You can write anything here about yourself or your site.
+I’m Artem.  
+This blog is a space for notes, experiments, ideas, and thoughts.  
+A place to learn, build, and explore.
+
+  </div>
+</div>
