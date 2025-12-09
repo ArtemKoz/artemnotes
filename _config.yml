@@ -2,13 +2,15 @@ title: Artem Notes
 description: Personal blog
 theme: minima
 
-# Pages in top navigation, in order
+# Only About appears in the top navigation
 header_pages:
   - about.md
 
-# Disable RSS
+# Disable RSS generation
 plugins: []
 
-# Optional: keeps URLs clean
+# Optional: cleaner Markdown processing
 markdown: kramdown
 
+# Make URLs clean
+permalink: /:categories/:year/:month/:day/:title/
