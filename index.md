@@ -3,8 +3,7 @@ layout: default
 title: Home
 ---
 
-# Welcome to Artem Notes
+# Welcome to my journal
 
-This is my personal website powered by Jekyll on GitHub Pages.
+My yapping website attempt.
 
-You can add new posts in the `_posts/` folder.
