@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My First Video"
+title: "My First Post"
 date: 2025-12-10
 ---
 
