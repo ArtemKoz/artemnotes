@@ -1,57 +1,104 @@
 ---
 ---
-/* --- CONFIGURATION --- */
+/* --- 1. FONTS & CONFIGURATION --- */
+/* To change the main title font, import a Google Font here. 
+   Example: Importing 'Playfair Display' (a nice serif font) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 :root {
-  --bg-color: #0f172a;       /* Midnight Slate (Background) */
-  --card-border: #334155;    /* Lighter Slate (Border lines) */
-  --text-primary: #f8fafc;   /* White (Main titles) */
-  --text-secondary: #94a3b8; /* Light Grey (Small text) */
-  --hover-color: #1e293b;    /* Slightly lighter bg on hover */
+  --bg-color: #0f172a;       
+  --card-border: #334155;    
+  --text-primary: #f8fafc;   
+  --text-secondary: #94a3b8; 
+  --hover-color: #1e293b;    
 }
 
+/* --- 2. GLOBAL STYLES --- */
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   margin: 0;
-  font-family: sans-serif;
+  font-family: sans-serif; /* System font for body text */
 }
 
-/* --- LAYOUT --- */
+/* --- 3. HEADER (Artem's Notes) --- */
+header {
+  padding: 4rem 2rem 2rem; /* Extra space at top */
+  text-align: center;      /* CENTERS the title */
+  border-bottom: none;     /* Removes any line below header */
+}
+
+.site-title {
+  /* FONT SETTINGS FOR TITLE */
+  font-family: 'Playfair Display', serif; /* Use the font imported above */
+  font-size: 3.5rem;       
+  font-weight: 700;
+  
+  /* COLOR & LINK REMOVAL */
+  color: var(--text-primary) !important; /* Force White */
+  text-decoration: none !important;      /* Remove Underline */
+}
+
+.site-title:hover {
+  text-decoration: none; /* Ensures no underline on hover either */
+  cursor: default;       /* Optional: makes it feel like text, not a link */
+}
+
+
+/* --- 4. MAIN LAYOUT --- */
 .articles-section {
-  background-color: var(--bg-color);
-  color: var(--text-primary);
-  padding: 4rem 2rem;
-  font-family: sans-serif; 
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 400;
+  color: var(--text-primary);
+  
+  /* Removes the "link icon" behavior if your theme adds it */
+  pointer-events: none; 
+}
+/* Hides any auto-generated anchor links next to titles */
+.section-title a, .anchorjs-link {
+  display: none !important;
 }
 
+
+/* --- 5. GRID & CARDS (Spacing & Roundness) --- */
 .articles-grid {
   display: grid;
-  /* Responsive Grid: Creates 3 columns, drops to 1 on mobile automatically */
+  /* 3 columns */
   grid-template-columns: repeat(auto-fill, minmax(300px, unquote("1fr")));
-  border-top: 1px solid var(--card-border);
-  border-left: 1px solid var(--card-border);
+  
+  /* ADDS SPACING BETWEEN POSTS */
+  gap: 2rem; 
+  
+  /* REMOVES THE LINES AROUND THE WHOLE GRID */
+  border: none; 
 }
 
-/* --- CARD STYLING --- */
 .article-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 2rem;
-  border-right: 1px solid var(--card-border);
-  border-bottom: 1px solid var(--card-border);
-  min-height: 280px; /* Reduced height slightly since header is gone */
-  transition: background 0.3s ease;
+  
+  /* ADDS BORDER TO INDIVIDUAL CARDS INSTEAD */
+  border: 1px solid var(--card-border);
+  
+  /* ADDS ROUND CORNERS */
+  border-radius: 16px; 
+  
+  min-height: 280px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .article-card:hover {
   background-color: var(--hover-color);
+  transform: translateY(-5px); /* Optional: Slight lift on hover */
 }
 
 .card-title {
@@ -59,9 +106,9 @@ body {
   font-size: 1.8rem;
   line-height: 1.2;
   font-weight: 500;
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
-  align-items: center; /* Vertically centers the title if text is short */
+  align-items: center;
 }
 
 .card-title a {
@@ -69,10 +116,10 @@ body {
   color: var(--text-primary);
 }
 
-/* --- FOOTER --- */
+/* --- 6. FOOTER --- */
 .card-footer {
   display: flex;
-  justify-content: flex-end; /* Aligns content to the right */
+  justify-content: flex-end;
   margin-top: 2rem;
 }
 
