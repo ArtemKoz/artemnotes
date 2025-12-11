@@ -14,53 +14,48 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   margin: 0;
-  font-family: sans-serif; /* Standard font for text */
+  font-family: sans-serif;
 }
 
-/* --- HEADER (Artem's Notes) --- */
+/* --- HEADER --- */
 .site-header {
-  padding: 4rem 2rem 1rem; /* Spacing above/below title */
-  text-align: center;      /* CENTERS the title */
+  padding: 4rem 2rem 1rem; 
+  text-align: center; /* CENTERS the title */
 }
 
 .site-title {
   margin: 0;
-  font-family: 'Playfair Display', serif; /* Custom Font */
+  font-family: 'Playfair Display', serif; /* Font Change Here */
   font-size: 3.5rem;       
   font-weight: 700;
-  color: var(--text-primary);
-  cursor: default; /* Shows arrow instead of hand pointer */
+  color: var(--text-primary) !important; /* Forces White */
+  text-decoration: none;
+  cursor: default; 
 }
 
 /* --- LAYOUT --- */
 .articles-section {
   padding: 2rem;
-  /* Removed border lines here */
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 400;
-  
-  /* Hides the "link" icon next to "Articles" */
   pointer-events: none; 
 }
-/* Hides specific auto-generated link icons */
-.section-title .anchorjs-link {
-  display: none !important;
-}
+.section-title .anchorjs-link { display: none !important; }
 
-/* --- GRID SYSTEM --- */
+/* --- GRID SYSTEM (The Fix) --- */
 .articles-grid {
   display: grid;
-  /* 3 columns */
-  grid-template-columns: repeat(auto-fill, minmax(300px, unquote("1fr")));
+  /* Columns are flexible */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
   
-  /* ADDS SPACING BETWEEN CARDS */
-  gap: 2rem; 
+  /* CENTERS the cards in the middle of the screen */
+  justify-content: center; 
   
-  /* REMOVED the outer border lines */
+  gap: 2rem;
   border: none; 
 }
 
@@ -70,18 +65,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
-  
-  /* ROUNDED CORNERS & INDIVIDUAL BORDERS */
   border: 1px solid var(--card-border);
   border-radius: 16px; 
-  
   min-height: 280px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .article-card:hover {
   background-color: var(--hover-color);
-  transform: translateY(-5px); /* Subtle lift effect */
+  transform: translateY(-5px);
 }
 
 .card-title {
@@ -134,5 +126,4 @@ body {
   padding: 4rem 2rem;
   text-align: center;
   color: var(--text-secondary);
-  border-top: none; /* Removed footer line too */
 }
