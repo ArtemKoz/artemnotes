@@ -1,16 +1,12 @@
+baseurl: ""
+url: "https://www.artemnotes.com" 
+
 title: "Artem's Notes"
 description: "Think big, Start small, Grow smart"
 author: "Artem Koz"
-theme: minima # We will override this with your custom CSS
+theme: minima 
 plugins:
   - jekyll-seo-tag
-
-# --- CRITICAL SETTINGS FOR YOU ---
-# Because your repo is 'artemnotes', your baseurl MUST be this:
-baseurl: "/artemnotes" 
-url: "https://artemkoz.github.io" 
-
-# This makes sure your CSS builds correctly
 sass:
   sass_dir: _sass
   style: compressed
