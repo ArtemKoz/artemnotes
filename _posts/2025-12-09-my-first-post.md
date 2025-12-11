@@ -1,7 +1,11 @@
 ---
 layout: post
-title: "My First Post"
-date: 2025-12-09
+title: "Think big, Start small, Grow smart"
+author: "Me"
+# This is the small text above the title
+intro_text: "Kim explains how we work" 
+# Path to the author's image in your assets folder
+author_image: "/assets/images/kim-avatar.jpg" 
 ---
 
 Hey, that's my first post here while everything is still in testing.
