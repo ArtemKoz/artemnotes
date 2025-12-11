@@ -4,9 +4,5 @@ url: "https://www.artemnotes.com"
 title: "Artem's Notes"
 description: "Think big, Start small, Grow smart"
 author: "Artem Koz"
-theme: minima 
 plugins:
   - jekyll-seo-tag
-sass:
-  sass_dir: _sass
-  style: compressed
