@@ -1,10 +1,16 @@
-theme: minima
+title: "Artem's Notes"
+description: "Think big, Start small, Grow smart"
+author: "Artem Koz"
+theme: minima # We will override this with your custom CSS
+plugins:
+  - jekyll-seo-tag
 
-# Disable RSS generation
-plugins: []
+# --- CRITICAL SETTINGS FOR YOU ---
+# Because your repo is 'artemnotes', your baseurl MUST be this:
+baseurl: "/artemnotes" 
+url: "https://artemkoz.github.io" 
 
-# Optional: cleaner Markdown processing
-markdown: kramdown
-
-# Make URLs clean
-permalink: /:categories/:year/:month/:day/:title/
+# This makes sure your CSS builds correctly
+sass:
+  sass_dir: _sass
+  style: compressed
