@@ -1,43 +1,51 @@
 ---
 ---
-/* --- CONFIGURATION --- */
+/* --- 1. FONT LINK (CHANGE THIS LINK TO CHANGE FONT) --- */
+/* Go to fonts.google.com, select a font, and paste the @import code here: */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+/* --- 2. CONFIGURATION --- */
 :root {
-  --bg-color: #0f172a;       
-  --card-border: #334155;    
-  --text-primary: #f8fafc;   
-  --text-secondary: #94a3b8; 
-  --hover-color: #1e293b;    
+  --bg-color: #0f172a;       /* Dark Background */
+  --card-border: #334155;    /* Border Color */
+  --text-primary: #f8fafc;   /* White Text */
+  --text-secondary: #94a3b8; /* Grey Text */
+  --hover-color: #1e293b;    /* Hover Color */
 }
 
-/* --- GLOBAL STYLES --- */
+/* --- 3. GLOBAL STYLES --- */
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   margin: 0;
-  font-family: sans-serif;
+  font-family: sans-serif; /* This is the font for the body text */
 }
 
-/* --- HEADER (The Fix for Purple Text) --- */
+/* --- 4. HEADER (FIX FOR PURPLE TITLE) --- */
 .site-header {
   padding: 4rem 2rem 1rem; 
   text-align: center; 
 }
 
+/* This block forces the title to be White and removes the underline */
 .site-title, 
 .site-title a, 
 .site-title a:visited, 
 .site-title a:hover {
+  /* Use the font name you imported at the top */
   font-family: 'Playfair Display', serif; 
+  
   font-size: 3.5rem;       
   font-weight: 700;
   
-  /* The !important forces it to be white, ignoring everything else */
+  /* !important overrides the default purple link color */
   color: #ffffff !important; 
   text-decoration: none !important;
   cursor: default; 
 }
 
-/* --- LAYOUT --- */
+/* --- 5. LAYOUT --- */
 .articles-section {
   padding: 2rem;
 }
@@ -49,24 +57,26 @@ body {
   color: var(--text-primary);
 }
 
-/* --- REMOVING THE LINK ICONS --- */
-/* This hides those little chain icons next to titles */
+/* --- 6. HIDING ICONS --- */
+/* This hides the "link chain" icon next to titles */
 .anchorjs-link {
   display: none !important;
 }
 
-/* --- GRID SYSTEM (The Fix for Centering) --- */
+/* --- 7. GRID SYSTEM (CENTERED) --- */
 .articles-grid {
   display: grid;
-  /* auto-fit + justify-content: center ensures cards are in the middle */
+  /* This creates flexible columns */
   grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  
+  /* This CENTERS the blocks in the middle of the screen */
   justify-content: center; 
   
   gap: 2rem;
   border: none; 
 }
 
-/* --- CARD STYLING --- */
+/* --- 8. CARD STYLING --- */
 .article-card {
   display: flex;
   flex-direction: column;
@@ -98,7 +108,7 @@ body {
   color: var(--text-primary);
 }
 
-/* --- FOOTER --- */
+/* --- 9. FOOTER LINKS (READ MORE) --- */
 .card-footer {
   display: flex;
   justify-content: flex-end;
