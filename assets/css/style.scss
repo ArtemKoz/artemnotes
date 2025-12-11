@@ -9,6 +9,13 @@
   --hover-color: #1e293b;    /* Slightly lighter bg on hover */
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: sans-serif;
+}
+
 /* --- LAYOUT --- */
 .articles-section {
   background-color: var(--bg-color);
