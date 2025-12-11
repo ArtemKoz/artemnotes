@@ -17,19 +17,23 @@ body {
   font-family: sans-serif;
 }
 
-/* --- HEADER --- */
+/* --- HEADER (The Fix for Purple Text) --- */
 .site-header {
   padding: 4rem 2rem 1rem; 
-  text-align: center; /* CENTERS the title */
+  text-align: center; 
 }
 
-.site-title {
-  margin: 0;
-  font-family: 'Playfair Display', serif; /* Font Change Here */
+.site-title, 
+.site-title a, 
+.site-title a:visited, 
+.site-title a:hover {
+  font-family: 'Playfair Display', serif; 
   font-size: 3.5rem;       
   font-weight: 700;
-  color: var(--text-primary) !important; /* Forces White */
-  text-decoration: none;
+  
+  /* The !important forces it to be white, ignoring everything else */
+  color: #ffffff !important; 
+  text-decoration: none !important;
   cursor: default; 
 }
 
@@ -42,17 +46,20 @@ body {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 400;
-  pointer-events: none; 
+  color: var(--text-primary);
 }
-.section-title .anchorjs-link { display: none !important; }
 
-/* --- GRID SYSTEM (The Fix) --- */
+/* --- REMOVING THE LINK ICONS --- */
+/* This hides those little chain icons next to titles */
+.anchorjs-link {
+  display: none !important;
+}
+
+/* --- GRID SYSTEM (The Fix for Centering) --- */
 .articles-grid {
   display: grid;
-  /* Columns are flexible */
+  /* auto-fit + justify-content: center ensures cards are in the middle */
   grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-  
-  /* CENTERS the cards in the middle of the screen */
   justify-content: center; 
   
   gap: 2rem;
