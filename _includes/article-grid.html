@@ -5,26 +5,11 @@
     {% for post in site.posts limit:6 %}
       <article class="article-card">
         
-        <div class="card-header">
-          <small>
-            {% if post.intro_text %}
-              {{ post.intro_text }}
-            {% else %}
-              {{ post.author }} writes
-            {% endif %}
-          </small>
-        </div>
-
         <h3 class="card-title">
           <a href="{{ post.url }}">{{ post.title }}</a>
         </h3>
 
-        <div class="card-footer">
-          <div class="author-avatar">
-            <img src="{{ post.author_image | default: 'https://placehold.co/100x100/grey/white?text=User' }}" alt="{{ post.author }}">
-          </div>
-          
-          <a href="{{ post.url }}" class="read-more">
+        <div class="card-footer" style="justify-content: flex-end;"> <a href="{{ post.url }}" class="read-more">
             read more <span class="arrow">&longrightarrow;</span>
           </a>
         </div>
