@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   {% seo %}
-
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <header class="site-header">
+    <h1 class="site-title">{{ site.title }}</h1>
+  </header>
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
@@ -17,7 +19,7 @@
     </div>
   </main>
 
-  <footer style="background: var(--bg-color); padding: 2rem; border-top: 1px solid var(--card-border); text-align: center; color: var(--text-secondary);">
+  <footer class="site-footer">
     <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
   </footer>
 
