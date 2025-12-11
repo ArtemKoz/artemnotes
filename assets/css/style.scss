@@ -1,10 +1,6 @@
 ---
 ---
-/* --- 1. FONTS & CONFIGURATION --- */
-/* To change the main title font, import a Google Font here. 
-   Example: Importing 'Playfair Display' (a nice serif font) */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
+/* --- CONFIGURATION --- */
 :root {
   --bg-color: #0f172a;       
   --card-border: #334155;    
@@ -13,83 +9,70 @@
   --hover-color: #1e293b;    
 }
 
-/* --- 2. GLOBAL STYLES --- */
+/* --- GLOBAL STYLES --- */
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   margin: 0;
-  font-family: sans-serif; /* System font for body text */
+  font-family: sans-serif; /* Standard font for text */
 }
 
-/* --- 3. HEADER (Artem's Notes) --- */
-header {
-  padding: 4rem 2rem 2rem; /* Extra space at top */
+/* --- HEADER (Artem's Notes) --- */
+.site-header {
+  padding: 4rem 2rem 1rem; /* Spacing above/below title */
   text-align: center;      /* CENTERS the title */
-  border-bottom: none;     /* Removes any line below header */
 }
 
 .site-title {
-  /* FONT SETTINGS FOR TITLE */
-  font-family: 'Playfair Display', serif; /* Use the font imported above */
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* Custom Font */
   font-size: 3.5rem;       
   font-weight: 700;
-  
-  /* COLOR & LINK REMOVAL */
-  color: var(--text-primary) !important; /* Force White */
-  text-decoration: none !important;      /* Remove Underline */
+  color: var(--text-primary);
+  cursor: default; /* Shows arrow instead of hand pointer */
 }
 
-.site-title:hover {
-  text-decoration: none; /* Ensures no underline on hover either */
-  cursor: default;       /* Optional: makes it feel like text, not a link */
-}
-
-
-/* --- 4. MAIN LAYOUT --- */
+/* --- LAYOUT --- */
 .articles-section {
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* Removed border lines here */
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 400;
-  color: var(--text-primary);
   
-  /* Removes the "link icon" behavior if your theme adds it */
+  /* Hides the "link" icon next to "Articles" */
   pointer-events: none; 
 }
-/* Hides any auto-generated anchor links next to titles */
-.section-title a, .anchorjs-link {
+/* Hides specific auto-generated link icons */
+.section-title .anchorjs-link {
   display: none !important;
 }
 
-
-/* --- 5. GRID & CARDS (Spacing & Roundness) --- */
+/* --- GRID SYSTEM --- */
 .articles-grid {
   display: grid;
   /* 3 columns */
   grid-template-columns: repeat(auto-fill, minmax(300px, unquote("1fr")));
   
-  /* ADDS SPACING BETWEEN POSTS */
+  /* ADDS SPACING BETWEEN CARDS */
   gap: 2rem; 
   
-  /* REMOVES THE LINES AROUND THE WHOLE GRID */
+  /* REMOVED the outer border lines */
   border: none; 
 }
 
+/* --- CARD STYLING --- */
 .article-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
   
-  /* ADDS BORDER TO INDIVIDUAL CARDS INSTEAD */
+  /* ROUNDED CORNERS & INDIVIDUAL BORDERS */
   border: 1px solid var(--card-border);
-  
-  /* ADDS ROUND CORNERS */
   border-radius: 16px; 
   
   min-height: 280px;
@@ -98,7 +81,7 @@ header {
 
 .article-card:hover {
   background-color: var(--hover-color);
-  transform: translateY(-5px); /* Optional: Slight lift on hover */
+  transform: translateY(-5px); /* Subtle lift effect */
 }
 
 .card-title {
@@ -116,7 +99,7 @@ header {
   color: var(--text-primary);
 }
 
-/* --- 6. FOOTER --- */
+/* --- FOOTER --- */
 .card-footer {
   display: flex;
   justify-content: flex-end;
@@ -145,4 +128,11 @@ header {
 
 .read-more:hover .arrow {
   transform: translateX(5px);
+}
+
+.site-footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  border-top: none; /* Removed footer line too */
 }
