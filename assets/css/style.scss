@@ -26,7 +26,7 @@
 .articles-grid {
   display: grid;
   /* Responsive Grid: Creates 3 columns, drops to 1 on mobile automatically */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, unquote("1fr")));
   border-top: 1px solid var(--card-border);
   border-left: 1px solid var(--card-border);
 }
