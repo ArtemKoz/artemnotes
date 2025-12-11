@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <header style="background: var(--bg-color); padding: 2rem; border-bottom: 1px solid var(--card-border);">
+    <div class="wrapper" style="max-width: 1200px; margin: 0 auto; color: white;">
+      <a class="site-title" href="{{ '/' | relative_url }}" style="color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold;">
+        {{ site.title }}
+      </a>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer style="background: var(--bg-color); padding: 2rem; border-top: 1px solid var(--card-border); text-align: center; color: var(--text-secondary);">
+    <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
+  </footer>
+
+</body>
+</html>
